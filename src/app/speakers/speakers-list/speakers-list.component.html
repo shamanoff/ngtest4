@@ -1,6 +1,8 @@
+<div class="large-5 columns">
 <h2>Speakers</h2>
   <div class="sp"
     *ngFor="let speaker of speakers"
     [style.background-image]="'url(assets/' + speaker.src + ')'"
     (click)="showBio(speaker.id)">
   </div>
+</div>
