@@ -1,0 +1,8 @@
+<div >
+  <div class="small-12 large-12 columns text-center" >
+    <h1>Welcome to Angular 2 Named Router Outlets</h1>
+    <p>Select a route above or click the button below to see what different router-outlets produce.
+    </p>
+    <button class="button" [routerLink]="['/speakers', {outlets: {list: ['speakersList'], bio: ['none']}}]">Speakers</button>
+  </div>
+</div>
