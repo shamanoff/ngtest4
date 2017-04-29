@@ -1,6 +1,6 @@
 import {Component, HostBinding, OnInit} from '@angular/core';
 import {SpeakersService} from '../shared/speakers.service';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Params, Router} from '@angular/router';
 import {Speaker} from '../shared/speakers';
 
 @Component({
@@ -15,11 +15,13 @@ export class SpeakersListComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private service: SpeakersService
+    private activatedRoute: ActivatedRoute,
+    private service: SpeakersService,
   ) { }
 
   ngOnInit() {
     this.speakers = this.service.getSpeakers();
+
   }
 
   showBio(id) {

@@ -3,7 +3,8 @@
   <div class="sp"
     *ngFor="let speaker of speakers"
     [style.background-image]="'url(assets/' + speaker.src + ')'"
-    (click)="showBio(speaker.id)">
+    (click)="showBio(speaker.id)"
+  >
   </div>
 
 </div>
