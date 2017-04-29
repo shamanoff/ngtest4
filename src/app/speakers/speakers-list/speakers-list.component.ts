@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostBinding, OnInit} from '@angular/core';
 import {SpeakersService} from '../shared/speakers.service';
 import {Router} from '@angular/router';
 import {Speaker} from '../shared/speakers';
@@ -9,7 +9,8 @@ import {Speaker} from '../shared/speakers';
   styleUrls: ['./speakers-list.component.css']
 })
 export class SpeakersListComponent implements OnInit {
-
+  @HostBinding('class.small-6')
+  @HostBinding('class.columns')
   speakers: Speaker[] = [];
 
   constructor(

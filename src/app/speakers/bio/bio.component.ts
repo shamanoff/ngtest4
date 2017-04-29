@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostBinding, OnInit} from '@angular/core';
 import {SpeakersService} from '../shared/speakers.service';
 import {ActivatedRoute} from '@angular/router';
 import {Speaker} from '../shared/speakers';
@@ -9,6 +9,8 @@ import {Speaker} from '../shared/speakers';
   styleUrls: ['./bio.component.css']
 })
 export class BioComponent implements OnInit {
+  @HostBinding('class.small-6')
+  @HostBinding('class.columns')
   currentSpeaker: Speaker;
 
   constructor(private route: ActivatedRoute,
